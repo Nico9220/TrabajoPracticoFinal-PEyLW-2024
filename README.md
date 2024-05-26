@@ -1,6 +1,6 @@
 # TrabajoPracticoFinal-PEyLW-2024
 
-#### Pautas:
+## Pautas:
 
 - Cantidad de páginas 6 como mínimo.
 - La estructura del Sitio debe reflejarse en cada una de las páginas. Es decir tener menú, encabezado y pie general en todas las páginas.
@@ -23,3 +23,13 @@
 - Se considerará positivamente el aspecto visual del sitio.
 - El uso de frameworks de CSS no está permitido
 - En el caso de tener alguna consulta, no dudes en preguntar a la cátedra.
+
++ Item A
++ Item B
+    + Item B 1
+    + Item B 2
+    + Item B 3
++ Item C
+    * Item C 1
+    * Item C 2
+    * Item C 3
