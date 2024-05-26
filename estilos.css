@@ -3,17 +3,53 @@
     padding: 0;
 }
 
+/* Estilos generales*/
+body {
+    background-color: white;
+}
+
 .navbar {
     text-align: center;
-    background-color: grey;
+    background-color:  white;
 }
 
 .navbar img{
     width: 15vh;
     height: 15vh;
+    margin: 15px;
 }
 
 .navbar a {
     margin: 40px;
     margin-bottom: 20px;
+    font-size: 15px;
+    color: #465152;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: #5CC7D1;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #D15C9F;
+    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.footer .foot-contact{
+
+}
+.footer .foot-direccion{
+
+}
+.footer .foot-redes{
+
+}
+.footer .foot-preguntas{
+
 }
