@@ -6,6 +6,9 @@
 /* Estilos generales*/
 body {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -35,21 +38,26 @@ body {
 .footer {
     background-color: #D15C9F;
     padding: 1em 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
+    text-align: center;
+    margin-top: auto;
 }
 
 .footer .foot-contact{
-
+    position: absolute;
+    right: 80%;
 }
 .footer .foot-direccion{
+    position: absolute;
+    right: 65%;
 
 }
 .footer .foot-redes{
+    position: absolute;
+    left: 80%;
 
 }
 .footer .foot-preguntas{
+    position: absolute;
+    left: 65%;
 
 }
