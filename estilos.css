@@ -61,3 +61,49 @@ body {
     left: 65%;
 
 }
+
+/* Home */
+
+.main-home {
+    display: flex;
+    justify-content: center;
+}
+
+.main-nosotros{
+    border: 3px solid black;
+    border-radius: 25px;
+    margin: 10px;
+    width: 50vh;
+    height: 70vh;
+    background-color: lightgrey;
+}
+
+.main-nosotros h3{
+    text-align: center;
+}
+
+.main-valores{
+    border: 3px solid black;
+    border-radius: 25px;
+    margin: 10px;
+    width: 50vh;
+    height: 70vh;
+    background-color: lightgrey;
+}
+
+.main-valores h3{
+    text-align: center;
+}
+
+.main-servicios{
+    border: 3px solid black;
+    border-radius: 25px;
+    margin: 10px;
+    width: 50vh;
+    height: 70vh;
+    background-color: lightgrey;
+}
+
+.main-servicios h3{
+    text-align: center;
+}
