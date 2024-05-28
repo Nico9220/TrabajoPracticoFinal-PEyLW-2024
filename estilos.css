@@ -67,23 +67,32 @@ body {
 .main-home {
     display: flex;
     justify-content: center;
+    margin: 100px;
 }
 
-.main-nosotros{
-    border: 3px solid black;
+.main-card{
+    border: 1px solid gray;
     border-radius: 25px;
     margin: 10px;
     width: 50vh;
     height: 70vh;
-    background-color: lightgrey;
+    background-color: white;
 }
 
-.main-nosotros h3{
+.main-card h3{
     text-align: center;
+    color: darkgray ;
 }
 
+.main-card p {
+    display: flex;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/*
 .main-valores{
-    border: 3px solid black;
+    border: 1px solid gray;
     border-radius: 25px;
     margin: 10px;
     width: 50vh;
@@ -96,7 +105,7 @@ body {
 }
 
 .main-servicios{
-    border: 3px solid black;
+    border: 1px solid gray;
     border-radius: 25px;
     margin: 10px;
     width: 50vh;
@@ -107,3 +116,4 @@ body {
 .main-servicios h3{
     text-align: center;
 }
+*/
