@@ -52,7 +52,7 @@ nav {
 }
 
 .navbar img{
-    height: 50px; /* Ajusta la altura del logo */
+    height: 50px; /* Ajusto la altura del logo */
     transition: transform 0.3s ease;
 }
 .navbar img:hover{
@@ -130,17 +130,17 @@ section.equipo-medico {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    background-color: #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
 
 }
 
 .perfil {
     width: calc(100% - 40px); /* Ajusta el ancho y el margen para el espaciado */
-    background-color: #bbb;
+    background-color: #bbbbbb9c;
     margin: 20px;
     padding: 15px;
     border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 3s, background-color 3s;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -215,7 +215,6 @@ footer{
     display: inline;
     margin: 0 5px;
 }
-/* Home */
 
 
 /*SLIDER*/
