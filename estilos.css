@@ -131,7 +131,6 @@ section.equipo-medico {
     justify-content: center;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-
 }
 
 .perfil {
@@ -156,6 +155,41 @@ section.equipo-medico {
 
 .perfil.active p {
     display: block;
+}
+
+/* TESTIMONIOS */
+.testimonios {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonios-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonio {
+    background: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.testimonio p {
+    font-style: italic;
+    color: #555555;
+}
+
+.testimonio h3 {
+    text-align: right;
+    font-weight: normal;
+    color: #555555;
 }
 
 
