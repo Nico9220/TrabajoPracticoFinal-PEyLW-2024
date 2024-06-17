@@ -18,7 +18,7 @@ body {
 }
 
 nav {
-    background-color: #004d99; 
+    background-color: #004d99; /* o #648E91 */
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
