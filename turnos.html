@@ -25,6 +25,49 @@
 
     </header>
     <main>
+        <form id="miFormulario">
+
+
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" >
+        
+        
+        
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" >
+        
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" >
+        
+        
+        
+            <label for="obras_sociales">Obras Social:</label>
+            <select id="obras_sociales" name="obras_sociales">
+            <option value=""></option>
+            <option value="obra1">SOSUNC</option>
+            <option value="obra2">ISSN</option>
+            <option value="obra3">OSDE</option>
+            <!-- Agrega más opciones aquí -->
+            </select>
+        
+        
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <div class="date-inputs">
+            <input type="text" id="dia" name="dia" placeholder="D&iacute;a" >  
+            <input type="text" id="mes" name="mes" placeholder="Mes" > 
+            <input type="text" id="anio" name="anio" placeholder="A&ntilde;o" >
+            </div>
+        
+        
+        
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones"></textarea>
+        
+            <div id="divUsoOpcional"></div>
+        
+            <input type="submit" value="Enviar" onclick="return validar();">
+        </form>
     </main>
     <footer>
         <div class="footer-section">

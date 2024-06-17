@@ -192,6 +192,60 @@ section.equipo-medico {
     color: #555555;
 }
 
+/* Formulario para turnos */
+#enunciado, form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    margin-bottom: 12px;
+}
+
+select {
+    height: 36px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.date-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.date-inputs input[type="text"] {
+    width: 60px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
 
 /* FOOTER */
 footer{
