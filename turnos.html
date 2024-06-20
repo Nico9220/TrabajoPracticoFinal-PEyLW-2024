@@ -26,38 +26,40 @@
     </header>
     <main>
         <h1>Reserva de Turno</h1>
-    <form id="reservaForm">
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+        <div class="container">
+            <form id="reservaForm">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                </div>
+                <div>
+                    <label for="fecha">Fecha de Reserva:</label>
+                    <input type="text" id="fecha" name="fecha" readonly required>
+                </div>
+                <div>
+                    <label for="hora">Horario de Reserva:</label>
+                    <select id="hora" name="hora" required>
+                        <option value="">Seleccione un horario</option>
+                    </select>
+                </div>
+                <button type="submit">Reservar</button>
+            </form>
+            <div class="calendar-container">
+                <div class="calendar-nav">
+                    <button id="mesAnterior" disabled>&lt; Mes Anterior</button>
+                    <button id="mesPosterior">Mes Siguiente &gt;</button>
+                </div>
+                <div id="calendar"></div>
+            </div>
         </div>
-        <div>
-            <label for="email">Correo Electrónico:</label>
-            <input type="text" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required>
-        </div>
-        <div>
-            <label for="fecha">Fecha de Reserva:</label>
-            <input type="text" id="fecha" name="fecha" readonly required>
-        </div>
-        <div>
-            <label for="hora">Horario de Reserva:</label>
-            <select id="hora" name="hora" required>
-                <option value="">Seleccione un horario</option>
-            </select>
-        </div>
-        <button type="submit">Reservar</button>
-    </form>
-    <div class="calendar-nav">
-        <button id="mesAnterior" disabled>&lt; Mes Anterior</button>
-        <button id="mesPosterior">Mes Siguiente &gt;</button>
-    </div>
-    <div id="calendar">
-
-    </div>
     </main>
     <footer>
         <div class="footer-section">

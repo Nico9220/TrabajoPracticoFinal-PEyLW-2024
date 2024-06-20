@@ -193,40 +193,78 @@ section.equipo-medico {
 }
 
 /* Formulario para turnos */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+#reservaForm {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.977);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservaForm div {
+    margin-bottom: 1rem;
+}
+
+#reservaForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#reservaForm input,
+#reservaForm select,
+#reservaForm button {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calendar-container {
+    background-color: rgba(255, 255, 255, 0.977);
+    border-radius: 5px;
+    padding: 100px;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
 #calendar {
-    max-width: 600px;
-    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    background-color:rgba(255, 255, 255, 0.8) ;
-    border-radius: 5px;
-    padding: 10px;
+    gap: 1rem;
 }
+
 .day {
-    border: 1px solid #ccc;
-    padding: 10px;
+    padding: 1rem;
+    text-align: center;
+    background: #f1f1f1;
+    border-radius: 5px;
     cursor: pointer;
 }
-.day:hover {
+.day:hover{
     background-color: #5CC7D1;
 }
-.selected {
-    background-color: #add8e6;
+
+.day.disabled {
+    pointer-events: none;
+    background: #ccc;
 }
-form {
-    max-width: 600px;
-    margin: 20px auto;
-}
-form div {
-    margin-bottom: 10px;
-}
-.calendar-nav {
-    text-align: center;
-    margin-bottom: 10px;
-}
-.calendar-nav button {
-    margin: 0 5px;
+
+.day.selected {
+    background: #0056b3;
+    color: white;
 }
 
 /* TERMINA  FORMULARIO*/
