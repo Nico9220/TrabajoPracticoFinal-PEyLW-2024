@@ -327,12 +327,53 @@ input[type="submit"]:hover {
     display: flex;
 }
 
+#direccion{
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    backdrop-filter: blur(10px); /* sirve para desenfocar el fondo*/
+}
+
+#mapa{
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    backdrop-filter: blur(10px); /* sirve para desenfocar el fondo*/
+}
+
+#consultas{
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    backdrop-filter: blur(10px); /* sirve para desenfocar el fondo*/
+}
+
 .contacto{
     flex: 1;
     padding: 10px;
     border: 1px solid #000000cc;
 }
 
+#map{
+    width: 600px; 
+    height: 450px;
+    border:0;
+}
 /* FOOTER */
 footer{
     display: flex;
