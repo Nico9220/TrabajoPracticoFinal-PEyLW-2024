@@ -25,49 +25,39 @@
 
     </header>
     <main>
-        <form id="miFormulario">
-
-
-
+        <h1>Reserva de Turno</h1>
+    <form id="reservaForm">
+        <div>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" >
-        
-        
-        
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" >
-        
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" >
-        
-        
-        
-            <label for="obras_sociales">Obras Social:</label>
-            <select id="obras_sociales" name="obras_sociales">
-            <option value=""></option>
-            <option value="obra1">SOSUNC</option>
-            <option value="obra2">ISSN</option>
-            <option value="obra3">OSDE</option>
-            <!-- Agrega más opciones aquí -->
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="email">Correo Electrónico:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+        </div>
+        <div>
+            <label for="fecha">Fecha de Reserva:</label>
+            <input type="text" id="fecha" name="fecha" readonly required>
+        </div>
+        <div>
+            <label for="hora">Horario de Reserva:</label>
+            <select id="hora" name="hora" required>
+                <option value="">Seleccione un horario</option>
             </select>
-        
-        
-            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-            <div class="date-inputs">
-            <input type="text" id="dia" name="dia" placeholder="D&iacute;a" >  
-            <input type="text" id="mes" name="mes" placeholder="Mes" > 
-            <input type="text" id="anio" name="anio" placeholder="A&ntilde;o" >
-            </div>
-        
-        
-        
-            <label for="observaciones">Observaciones:</label>
-            <textarea id="observaciones" name="observaciones"></textarea>
-        
-            <div id="divUsoOpcional"></div>
-        
-            <input type="submit" value="Enviar" onclick="return validar();">
-        </form>
+        </div>
+        <button type="submit">Reservar</button>
+    </form>
+    <div class="calendar-nav">
+        <button id="mesAnterior" disabled>&lt; Mes Anterior</button>
+        <button id="mesPosterior">Mes Siguiente &gt;</button>
+    </div>
+    <div id="calendar">
+
+    </div>
     </main>
     <footer>
         <div class="footer-section">
@@ -96,5 +86,6 @@
             </ul>
         </div>
     </footer>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

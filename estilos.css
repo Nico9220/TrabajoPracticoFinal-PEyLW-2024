@@ -193,6 +193,41 @@ section.equipo-medico {
 }
 
 /* Formulario para turnos */
+#calendar {
+    max-width: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color:rgba(255, 255, 255, 0.8) ;
+}
+.day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+.day:hover {
+    background-color: #5CC7D1;
+}
+.selected {
+    background-color: #add8e6;
+}
+form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+form div {
+    margin-bottom: 10px;
+}
+.calendar-nav {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.calendar-nav button {
+    margin: 0 5px;
+}
+
+/* TERMINA  FORMULARIO*/
 #enunciado, form {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
