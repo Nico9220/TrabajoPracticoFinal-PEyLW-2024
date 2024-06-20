@@ -322,6 +322,17 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+/* CONTACTO */
+.container-contacto{
+    display: flex;
+}
+
+.contacto{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #000000cc;
+}
+
 /* FOOTER */
 footer{
     display: flex;
