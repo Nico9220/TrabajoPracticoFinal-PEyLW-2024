@@ -40,6 +40,23 @@
             </div>
             <div class="contacto" id="consultas">
                 <h3>Formulario de consultas</h3>
+                <form id="miFormulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" >              
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" >
+                
+                    <label for="apellido">Email:</label>
+                    <input type="text" id="email" name="email" >            
+                
+                
+                    <label for="observaciones">Consulta:</label>
+                    <textarea id="consultas" name="consultas"></textarea>
+                
+                    <div id="divUsoOpcional"></div>
+                
+                    <input type="submit" value="Enviar" onclick="return validar();">
+                </form>
             </div>
         </div>
     </main>
