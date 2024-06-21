@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" href="imgs/ISOTIPO.ico">
+    <script type="text/javascript" src="./script.js"></script>
     <title>Servicios</title>
 </head>
 <body>
@@ -27,35 +28,44 @@
     <main>
         <h1>Servicios</h1>
         <section class="servicios">
-            <div class="servicio" id="implantes-dentales">
+            <div class="servicio" id="implantes-dentales" onclick="togglePerfil(this)">
                 <h3>Implantes dentales</h3>
-                <p><p>Los implantes dentales son dispositivos de titanio que se insertan quirúrgicamente en el hueso maxilar para reemplazar las raíces de los dientes perdidos. Ofrecen una base sólida para los dientes artificiales, proporcionando una solución duradera y estética para la pérdida dental. Además, ayudan a preservar la estructura ósea y a mantener la alineación dental natural.</p>
-            </p>
+                <p>Los implantes dentales son dispositivos de titanio que se insertan quirúrgicamente en el hueso maxilar para reemplazar las raíces de los dientes perdidos. Ofrecen una base sólida para los dientes artificiales, proporcionando una solución duradera y estética para la pérdida dental. Además, ayudan a preservar la estructura ósea y a mantener la alineación dental natural.</p>
             </div>
-            <div class="servicio" id="blanqueamientos">
+            <div class="servicio" id="blanqueamientos" onclick="togglePerfil(this)">
                 <h3>Blanqueamientos</h3>
-                <p><p>El blanqueamiento dental es un procedimiento cosmético diseñado para aclarar el color de los dientes y eliminar manchas y decoloraciones. Utiliza productos químicos como el peróxido de hidrógeno o el peróxido de carbamida para descomponer las moléculas de color en los dientes. Es un tratamiento seguro y efectivo que puede realizarse en el consultorio dental o en casa bajo la supervisión de un dentista.</p>
-            </p>
+                <p>El blanqueamiento dental es un procedimiento cosmético diseñado para aclarar el color de los dientes y eliminar manchas y decoloraciones. Utiliza productos químicos como el peróxido de hidrógeno o el peróxido de carbamida para descomponer las moléculas de color en los dientes. Es un tratamiento seguro y efectivo que puede realizarse en el consultorio dental o en casa bajo la supervisión de un dentista.</p>
             </div>
-            <div class="servicio" id="coronas-pernos">
+            <div class="servicio" id="coronas-pernos" onclick="togglePerfil(this)">
                 <h3>Coronas y pernos</h3>
-                <p><p>Las coronas y los pernos son tratamientos restaurativos utilizados para reparar y fortalecer dientes dañados. Los pernos se utilizan cuando hay poca estructura dental natural para sostener una corona. La corona, que puede estar hecha de diversos materiales como porcelana o metal, cubre completamente el diente, restaurando su forma, tamaño y función, además de mejorar su apariencia estética.</p>
-            </p>
+                <p>Las coronas y los pernos son tratamientos restaurativos utilizados para reparar y fortalecer dientes dañados. Los pernos se utilizan cuando hay poca estructura dental natural para sostener una corona. La corona, que puede estar hecha de diversos materiales como porcelana o metal, cubre completamente el diente, restaurando su forma, tamaño y función, además de mejorar su apariencia estética.</p>
             </div>
-            <div class="servicio" id="carillas-porcelana">
+            <div class="servicio" id="carillas-porcelana" onclick="togglePerfil(this)">
                 <h3>Carillas de porcelana</h3>
-                <p><p>Las carillas de porcelana son finas láminas hechas a medida que se adhieren a la superficie frontal de los dientes para mejorar su apariencia. Son una solución ideal para corregir problemas como dientes descoloridos, astillados, desalineados o con espacios entre ellos. Las carillas de porcelana ofrecen una apariencia natural y duradera, mejorando significativamente la estética de la sonrisa.</p>
-            </p>
+                <p>Las carillas de porcelana son finas láminas hechas a medida que se adhieren a la superficie frontal de los dientes para mejorar su apariencia. Son una solución ideal para corregir problemas como dientes descoloridos, astillados, desalineados o con espacios entre ellos. Las carillas de porcelana ofrecen una apariencia natural y duradera, mejorando significativamente la estética de la sonrisa.</p>
             </div>
-            <div class="servicio" id="ortodoncia">
+            <div class="servicio" id="ortodoncia" onclick="togglePerfil(this)">
                 <h3>Ortodoncia</h3>
-                <p><p>La ortodoncia es una especialidad dental que se enfoca en corregir las irregularidades de los dientes y mandíbulas. Utiliza aparatos como brackets, alineadores y retenedores para alinear los dientes, mejorar la mordida y corregir problemas como el apiñamiento y la sobremordida. Este tratamiento no solo mejora la estética dental, sino también la funcionalidad y salud oral a largo plazo.</p>
-            </p>
+                <p>La ortodoncia es una especialidad dental que se enfoca en corregir las irregularidades de los dientes y mandíbulas. Utiliza aparatos como brackets, alineadores y retenedores para alinear los dientes, mejorar la mordida y corregir problemas como el apiñamiento y la sobremordida. Este tratamiento no solo mejora la estética dental, sino también la funcionalidad y salud oral a largo plazo.</p>
             </div>
-            <div class="servicio" id="odontologia-general">
+            <div class="servicio" id="odontologia-general" onclick="togglePerfil(this)">
                 <h3>Odontología general</h3>
-                <p><p>La odontología general abarca una amplia gama de servicios preventivos y de tratamiento para mantener la salud oral. Incluye limpiezas dentales, empastes, extracciones, tratamientos de conducto y exámenes de rutina. Los dentistas generales se centran en la prevención, diagnóstico y tratamiento de enfermedades y condiciones orales, ayudando a los pacientes a mantener una buena higiene bucal y una sonrisa saludable.</p>
-            </p>
+                <p>La odontología general abarca una amplia gama de servicios preventivos y de tratamiento para mantener la salud oral. Incluye limpiezas dentales, empastes, extracciones, tratamientos de conducto y exámenes de rutina. Los dentistas generales se centran en la prevención, diagnóstico y tratamiento de enfermedades y condiciones orales, ayudando a los pacientes a mantener una buena higiene bucal y una sonrisa saludable.</p>
+            </div>
+        </section>
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div id="como-agendar">
+                <h3>¿Cómo agendo una cita?</h3>
+                <p>Para agendar una cita en nuestro consultorio odontológico, puedes llamarnos al (123) 456-7890, enviarnos un correo electrónico a info@odontoclinica.com, o utilizar nuestro sistema de reservas en línea en la página de <a href="turnos.html">Turnos</a>.</p>
+            </div>
+            <div id="metodos-pago">
+                <h3>¿Cuáles son los métodos de pago?</h3>
+                <p>Ofrecemos una variedad de métodos de pago para tu conveniencia, incluyendo efectivo, tarjetas de crédito y débito, y transferencias bancarias. También aceptamos pagos a través de plataformas de pago en línea.</p>
+            </div>
+            <div id="aceptan-seguros">
+                <h3>¿Aceptan seguros?</h3>
+                <p>Sí, aceptamos una amplia gama de seguros odontológicos. Por favor, contacta con nosotros para verificar si tu seguro es aceptado en nuestro consultorio.</p>
             </div>
         </section>
     </main>

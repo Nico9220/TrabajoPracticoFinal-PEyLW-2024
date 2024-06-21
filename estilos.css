@@ -98,21 +98,35 @@ nav {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
+    margin: 25px;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.8); 
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .servicio {
-    width: 45%;
-    background-color: #bbb;
+    width: calc(45% - 20px); /* Ajusta el ancho y el margen para el espaciado */
+    background-color: #5CC7D1;
     margin: 10px;
     padding: 15px;
     border-radius: 8px;
-    transition: transform 3s, background-color 3s;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .servicio:hover {
-    background-color: #999;
+    background-color: #9ee6ed;
+    transform: scale(1.05);
+}
+
+.servicio.active {
+    background-color: #5CC7D1;
+    border: 2px solid #333;
+    outline: none; /* Elimina el borde azul predeterminado de enfoque */
+}
+
+.servicio.active:hover {
     transform: scale(1.05);
 }
 
@@ -120,8 +134,33 @@ nav {
     display: none;
 }
 
-.servicio:hover p {
+.servicio.active p {
     display: block;
+}
+
+
+
+/* Preguntas frecuentes */
+#faq {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+#faq h2 {
+    margin-bottom: 20px;
+}
+
+#faq h3 {
+    color: #648E91;
+    margin-top: 20px;
+}
+
+#faq p {
+    line-height: 1.6;
 }
 
 /* EQUIPO MEDICO */
@@ -131,11 +170,13 @@ section.equipo-medico {
     justify-content: center;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
+    margin: 25px;
+    border-radius: 5px;
 }
 
 .perfil {
     width: calc(100% - 40px); /* Ajusta el ancho y el margen para el espaciado */
-    background-color: #bbbbbb9c;
+    background-color: #5CC7D1;
     margin: 20px;
     padding: 15px;
     border-radius: 8px;
@@ -145,8 +186,8 @@ section.equipo-medico {
 }
 
 .perfil:hover {
-    background-color: #999;
-    transform: scale(1.05);
+    background-color: #9ee6ed;
+    transform: scale(1.01);
 }
 
 .perfil p {
