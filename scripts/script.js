@@ -24,23 +24,24 @@ function validarFormularioContacto(){
 
     const esValido = nombreValido && apellidoValido && emailValido && consultasValido;
 
-    if (esValido) {
-        alert("Todos los datos son correctos");
-    } 
     return esValido;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const formulario = document.getElementById('formularioContacto');
-    
-    formulario.addEventListener('submit', function(event) {
+/**
+ * Maneja el evento de envío del formulario de contacto.
+ * Si encontramos el formulario de contacto, entonces inicializamos el listener.
+ */
+const formularioContacto = document.getElementById('formularioContacto');
+if(formularioContacto){
+    formularioContacto.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        if (validarFormularioContacto()) {
-            formulario.reset();
-        } 
+        validarFormularioContacto();
+
+
     });
-});
+}
+
 
 // FORMULARIO TURNOS
 
@@ -63,13 +64,8 @@ function validarFormularioTurno() {
 
     const esValido = nombreValido && apellidoValido && emailValido && telefonoValido && fechaValida && horaValida && obraSocialValida;
 
-    if (esValido) {
-        alert("Todos los datos son correctos");
-    } 
     return esValido;
 }
-
-
 
 /**
  * Actualiza el estilo del campo de entrada basado en su validez.
@@ -142,42 +138,43 @@ function validarObrasSociales(obraSocial) {
     return esValido;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const formulario = document.getElementById('formularioTurnos');
-    
-    formulario.addEventListener('submit', function(event) {
+/**
+ * Maneja el evento de envío del formulario de turnos.
+ * Si encontramos el formuulario turnos, entonces inicializamos el listener.
+ */
+const formularioTurnos = document.getElementById('formularioTurnos');
+if(formularioTurnos){
+    formularioTurnos.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        if (validarFormularioTurno()) {
-            formulario.reset();
-        } 
+        validarFormularioTurno();
+            
     });
-});
 
-// MOSTRAR CALENDARIO
-//focus: click en un input
-const fechaInput = document.getElementById('fecha');
-fechaInput.addEventListener('focus', function(){
-    const calendarModal = document.getElementById('calendarModal');
-    calendarModal.style.display = 'initial';
-    const htmlBody = document.getElementById('body');
-    htmlBody.style.overflow = 'hidden';
-})
 
-// CALENDARIO
-/**
- * Con el método .addEventListener() permite añadir una escucha del evento indicado (primer parámetro), y en el caso de que ocurra, se ejecutará la función asociada indicada (segundo parámetro).
- */
-document.addEventListener('DOMContentLoaded', function() {
-    const calendario = document.getElementById('calendar');
+
+    // MOSTRAR CALENDARIO
+    //focus: click en un input
     const fechaInput = document.getElementById('fecha');
+    fechaInput.addEventListener('focus', function(){
+        const calendarModal = document.getElementById('calendarModal');
+        calendarModal.style.display = 'initial';
+        const htmlBody = document.getElementById('body');
+        htmlBody.style.overflow = 'hidden';
+    })
+
+    // CALENDARIO
+
+    /**
+     * Maneja la funcionalidad de un calendario interactivo y un formulario de turnos.
+     */
+    const calendario = document.getElementById('calendar');
     const horaSelect = document.getElementById('hora');
-    const formulario = document.getElementById('formularioTurnos');
     const botonMesAnterior = document.getElementById('mesAnterior');
     const botonMesPosterior = document.getElementById('mesPosterior');
     const calendarModal = document.getElementById('calendarModal');
     const htmlBody = document.getElementById('body');
-    
+
 
     let fechaActual = new Date();
     const hoy = new Date();
@@ -255,11 +252,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     crearCalendario(fechaActual.getFullYear(), fechaActual.getMonth());
-
-    formulario.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const formData = new FormData(formulario);
-        const datos = Object.fromEntries(formData.entries());
-    });
-});
-
+}
