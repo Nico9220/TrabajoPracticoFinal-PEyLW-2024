@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../styles/estilos.css">
     <link rel="icon" href="imgs/ISOTIPO.ico">
     <title>Turnos</title>
 </head>
-<body>
+<body id="body">
     <header>
         <!--Comienza la barra de navegacion-->
         <nav>
             <div class="navbar">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                <a class="nav-link" href="servicios.html">Servicios</a>
-                <a class="nav-link" href="equipoMedico.html">Equipo</a>
+                <a class="nav-link"  href="../index.html">Home</a>
+                <a class="nav-link" href="./servicios.html">Servicios</a>
+                <a class="nav-link" href="./equipoMedico.html">Equipo</a>
                     <!-- Logo -->
-                    <a href="index.html"><img src="imgs/ISOTIPO.png" alt="Logo"></a>
-                <a class="nav-link" href="testimonios.html">Testimonios</a>
-                <a class="nav-link" href="turnos.html">Turnos</a>
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a href="../index.html"><img src="../imgs/ISOTIPO.png" alt="Logo"></a>
+                    <a class="nav-link" href="./testimonios.html">Testimonios</a>
+                <a class="nav-link active" href="./turnos.html" aria-current="page">Turnos</a>
+                <a class="nav-link" href="./contacto.html">Contacto</a>
             </div>
         </nav>
 
     </header>
     <main>
-        <h1>Reserva de Turno</h1>
+        
         <div class="container">
-            <form id="reservaForm">
+            
+            <form id="formularioTurnos">
+                <h1>Reserva de Turno</h1>
                 <div>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -70,13 +72,18 @@
                 </div>
                 <button type="submit">Reservar</button>
             </form>
-            <div class="calendar-container">
+            <div class="calendarModal" id="calendarModal">
+            <div class="calendar-container" id="calendarContainer">
+                <h1>Seleccione la fecha de reserva</h1>
                 <div class="calendar-nav">
                     <button id="mesAnterior" disabled>&lt; Mes Anterior</button>
                     <button id="mesPosterior">Mes Siguiente &gt;</button>
                 </div>
-                <div id="calendar"></div>
+                <div id="calendar">
+
+                </div>
             </div>
+        </div>
         </div>
     </main>
     <footer>
@@ -106,6 +113,6 @@
             </ul>
         </div>
     </footer>
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="../scripts/script.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../styles/estilos.css">
     <link rel="icon" href="imgs/ISOTIPO.ico">
     <script type="text/javascript" src="./script.js"></script>
     <title>Servicios</title>
@@ -13,21 +13,23 @@
         <!--Comienza la barra de navegacion-->
         <nav>
             <div class="navbar">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                <a class="nav-link" href="servicios.html">Servicios</a>
-                <a class="nav-link" href="equipoMedico.html">Equipo</a>
+                <a class="nav-link"  href="../index.html">Home</a>
+                <a class="nav-link active" href="./servicios.html" aria-current="page">Servicios</a>
+                <a class="nav-link" href="./equipoMedico.html">Equipo</a>
                     <!-- Logo -->
-                    <a href="index.html"><img src="imgs/ISOTIPO.png" alt="Logo"></a>
-                <a class="nav-link" href="testimonios.html">Testimonios</a>
-                <a class="nav-link" href="turnos.html">Turnos</a>
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a href="../index.html"><img src="../imgs/ISOTIPO.png" alt="Logo"></a>
+                <a class="nav-link" href="./testimonios.html">Testimonios</a>
+                <a class="nav-link" href="./turnos.html">Turnos</a>
+                <a class="nav-link" href="./contacto.html">Contacto</a>
             </div>
         </nav>
 
     </header>
     <main>
-        <h1>Servicios</h1>
-        <section class="servicios">
+        
+        <div class="servicios">
+            <h1>Servicios</h1>
+            <div class="serviciosContainer">
             <div class="servicio" id="implantes-dentales" onclick="togglePerfil(this)">
                 <h3>Implantes dentales</h3>
                 <p>Los implantes dentales son dispositivos de titanio que se insertan quirúrgicamente en el hueso maxilar para reemplazar las raíces de los dientes perdidos. Ofrecen una base sólida para los dientes artificiales, proporcionando una solución duradera y estética para la pérdida dental. Además, ayudan a preservar la estructura ósea y a mantener la alineación dental natural.</p>
@@ -52,7 +54,8 @@
                 <h3>Odontología general</h3>
                 <p>La odontología general abarca una amplia gama de servicios preventivos y de tratamiento para mantener la salud oral. Incluye limpiezas dentales, empastes, extracciones, tratamientos de conducto y exámenes de rutina. Los dentistas generales se centran en la prevención, diagnóstico y tratamiento de enfermedades y condiciones orales, ayudando a los pacientes a mantener una buena higiene bucal y una sonrisa saludable.</p>
             </div>
-        </section>
+        </div>
+        </div>
         <section id="faq">
             <h2>Preguntas Frecuentes</h2>
             <div id="como-agendar">
@@ -96,6 +99,6 @@
             </ul>
         </div>
     </footer>
-    <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="../scripts/script.js"></script>
 </body>
 </html>

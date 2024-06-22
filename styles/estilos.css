@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(./imgs/profesional-herramientas-dentista-silla-oficina-dental_1204-394.jpg);
+    background-image: url(../imgs/profesional-herramientas-dentista-silla-oficina-dental_1204-394.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -35,7 +35,7 @@ nav {
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0 0 38px;
 }
 
 .nav-link {
@@ -95,17 +95,25 @@ nav {
 
 .servicios {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 25px 0;
     margin: 25px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.8); 
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.serviciosContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .servicio {
-    width: calc(45% - 20px); /* Ajusta el ancho y el margen para el espaciado */
+    width: 850px;
     background-color: #5CC7D1;
     margin: 10px;
     padding: 15px;
@@ -117,7 +125,7 @@ nav {
 
 .servicio:hover {
     background-color: #9ee6ed;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .servicio.active {
@@ -127,7 +135,7 @@ nav {
 }
 
 .servicio.active:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .servicio p {
@@ -241,7 +249,7 @@ section.equipo-medico {
     gap: 2rem;
 }
 
-#reservaForm {
+#formularioTurnos {
     flex: 1;
     background: rgba(255, 255, 255, 0.977);
     padding: 2rem;
@@ -249,30 +257,47 @@ section.equipo-medico {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#reservaForm div {
+#formularioTurnos div {
     margin-bottom: 1rem;
 }
 
-#reservaForm label {
+#formularioTurnos label {
     display: block;
     margin-bottom: 0.5rem;
 }
 
-#reservaForm input,
-#reservaForm select,
-#reservaForm button {
+#formularioTurnos input,
+#formularioTurnos select,
+#formularioTurnos button {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+.calendarModal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Oculto */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    
+}
+
 .calendar-container {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.977);
     border-radius: 5px;
-    padding: 100px;
+    padding: 50px;
     width: 50%;
     margin-right: 20px;
+    z-index: 6;
 }
 
 .calendar-nav {
@@ -309,9 +334,9 @@ section.equipo-medico {
 }
 
 /* TERMINA  FORMULARIO*/
-#enunciado, form {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+#enunciado, #formularioTurnos {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -366,6 +391,7 @@ input[type="submit"]:hover {
 /* CONTACTO */
 .container-contacto{
     display: flex;
+    width: 100%;
 }
 
 #direccion{
@@ -386,28 +412,51 @@ input[type="submit"]:hover {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
     max-width: 90%;
     text-align: center;
     backdrop-filter: blur(10px); /* sirve para desenfocar el fondo*/
 }
 
-#consultas{
+.contactoMapa{
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #000000cc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+#consultasContainer{
     background-color: rgba(255, 255, 255, 0.8); 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 500px;
     max-width: 90%;
     text-align: center;
     backdrop-filter: blur(10px); /* sirve para desenfocar el fondo*/
+}
+
+.formularioContacto{
+    width: 100%;
 }
 
 .contacto{
     flex: 1;
     padding: 10px;
     border: 1px solid #000000cc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactoContent{
+    margin-bottom: 15px;
+
 }
 
 #map{

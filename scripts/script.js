@@ -1,9 +1,8 @@
-//SLIDE
-
-const sliderContainer = document.getElementById('slider-container');
-const slider = document.getElementById('slider');
-const buttonLeft = document.getElementById('button-left');
-const buttonRight = document.getElementById('button-right');
+// CONSTANTES
+const colorCampoCorrecto = "#74ef7a40";
+const colorCampoIncorrecto = "#ff002030";
+const regexNumerico = /^\d+$/;
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // EQUIPO MEDICO
 
@@ -11,13 +10,41 @@ function togglePerfil(element) {
     element.classList.toggle("active");
 }
 
-// FORMULARIO
-const colorCampoCorrecto = "#74ef7a40";
-const colorCampoIncorrecto = "#ff002030";
-const regexNumerico = /^\d+$/;
-const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// FORMULARIO CONTACTO
+function validarFormularioContacto(){
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const email = document.getElementById("email").value;
+    const consultas = document.getElementById("consultas").value;
 
-function validar() {
+    const nombreValido = validarNombre(nombre);
+    const apellidoValido = validarApellido(apellido);
+    const emailValido = validarEmail(email);
+    const consultasValido = validarConsultas(consultas);
+
+    const esValido = nombreValido && apellidoValido && emailValido && consultasValido;
+
+    if (esValido) {
+        alert("Todos los datos son correctos");
+    } 
+    return esValido;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('formularioContacto');
+    
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        if (validarFormularioContacto()) {
+            formulario.reset();
+        } 
+    });
+});
+
+// FORMULARIO TURNOS
+
+function validarFormularioTurno() {
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
     const email = document.getElementById("email").value;
@@ -34,14 +61,15 @@ function validar() {
     const horaValida = validarHora(hora);
     const obraSocialValida = validarObrasSociales(obraSocial);
 
-    const esValido = nombreValido && apellidoValido && emailValido && telefonoValido &&
-                    fechaValida && horaValida && obraSocialValida;
+    const esValido = nombreValido && apellidoValido && emailValido && telefonoValido && fechaValida && horaValida && obraSocialValida;
 
     if (esValido) {
         alert("Todos los datos son correctos");
     } 
     return esValido;
 }
+
+
 
 /**
  * Actualiza el estilo del campo de entrada basado en su validez.
@@ -55,6 +83,12 @@ function actualizarEstiloCampo(input, esValido) {
     } else {
         input.style.backgroundColor = colorCampoIncorrecto;
     }
+}
+function validarConsultas(consultas) {
+    const input = document.getElementById("consultas");
+    const esValido = consultas && isNaN(consultas);
+    actualizarEstiloCampo(input, esValido);
+    return esValido;
 }
 
 function validarNombre(nombre) {
@@ -109,17 +143,26 @@ function validarObrasSociales(obraSocial) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const formulario = document.getElementById('reservaForm');
+    const formulario = document.getElementById('formularioTurnos');
     
     formulario.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        if (validar()) {
+        if (validarFormularioTurno()) {
             formulario.reset();
         } 
     });
 });
 
+// MOSTRAR CALENDARIO
+//focus: click en un input
+const fechaInput = document.getElementById('fecha');
+fechaInput.addEventListener('focus', function(){
+    const calendarModal = document.getElementById('calendarModal');
+    calendarModal.style.display = 'initial';
+    const htmlBody = document.getElementById('body');
+    htmlBody.style.overflow = 'hidden';
+})
 
 // CALENDARIO
 /**
@@ -129,9 +172,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const calendario = document.getElementById('calendar');
     const fechaInput = document.getElementById('fecha');
     const horaSelect = document.getElementById('hora');
-    const formulario = document.getElementById('reservaForm');
+    const formulario = document.getElementById('formularioTurnos');
     const botonMesAnterior = document.getElementById('mesAnterior');
     const botonMesPosterior = document.getElementById('mesPosterior');
+    const calendarModal = document.getElementById('calendarModal');
+    const htmlBody = document.getElementById('body');
+    
 
     let fechaActual = new Date();
     const hoy = new Date();
@@ -164,6 +210,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     diaCelda.classList.add('selected');
                     fechaInput.value = `${year}-${month + 1}-${i}`;
                     llenarHoraSelect();
+                    calendarModal.style.display = 'none';
+                    htmlBody.style.overflow = 'auto';
                 });
             }
 
