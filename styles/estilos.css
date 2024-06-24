@@ -38,14 +38,14 @@ nav {
     padding: 0 0 0 38px;
 }
 
-.nav-link {
+.navLink {
     color: #ffffff; 
     text-decoration: none;
     padding: 10px 15px;
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
-.nav-link:hover,.nav-link.active {
+.navLink:hover,.nav-link.active {
     background-color: #002d66; /* Color al pasar el ratón */
     border-radius: 5px;
     color: #5CC7D1;
