@@ -172,7 +172,7 @@ nav {
 }
 
 /* EQUIPO MEDICO */
-section.equipo-medico {
+div.equipo-medico {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
